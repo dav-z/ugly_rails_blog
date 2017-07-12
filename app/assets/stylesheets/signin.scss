@@ -1,0 +1,19 @@
+// Place all the styles related to the signin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.signinform {
+  width: 30%;
+  border: 1px solid black;
+  margin: 20px auto;
+  padding: 5px;
+  background-image: url('http://www.underconsideration.com/brandnew/archives/premier_league_pattern.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.signinform input {
+  width: 40%;
+}
+.signinform h1 {
+  color: white;
+}

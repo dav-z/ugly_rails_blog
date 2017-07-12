@@ -1,0 +1,23 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="signinform">
+    <h1>Sign Up</h1>
+    <%= form.text_field :fname, id: :user_fname, placeholder: 'first name' %><br>
+    <%= form.text_field :lname, id: :user_lname, placeholder: 'last name' %><br>
+    <%= form.text_field :bio, id: :user_bio, placeholder: 'bio' %><br>
+    <%= form.text_field :email, id: :user_email, placeholder: 'email' %><br>
+    <%= password_field_tag :password,nil, placeholder: 'password' %><br>
+    <%= form.submit %><br><br><br>
+    <a href="/signin">I already have an account.</a>
+  </div>
+<% end %>

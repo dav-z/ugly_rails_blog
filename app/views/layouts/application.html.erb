@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if @current_user %>
+      <div class="topbox1">
+        <span class="sessionlink"><%= flash[:notice] %> <%= link_to 'Logout', '/logout', method: :post %></span>
+      </div>
+    <% else %>
+      <div class="topbox">
+        <span class="sessionlink"><%= flash[:notice] %> <a href='/signin'>Sign In</a></span>
+      </div>
+    <% end %>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+      <%if @current_user %>
+        <li><a href="/users/<%= @current_user.id %>">Profile</a></li>
+      <% else %>
+        <li><a href="/signin">Profile</a></li>
+      <% end %>
+        <li><a href="/posts">Feed</a></li>
+        <li><a href="/users">Explore</a></li>
+      </ul>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

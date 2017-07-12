@@ -1,0 +1,12 @@
+<div class="profileposts">
+  <h2>New Posts</h2>
+    <% @posts.order( id: :desc ).each do |post| %>
+      <a href='/posts/<%= post.id %>'>
+        <div class="profilepost">
+        <strong><%= post.title %></strong><br>
+        <%= post.body %><br>
+        Post by: <%= post.user.full_name %>
+        </div>
+      </a>
+    <% end %>
+  </div>

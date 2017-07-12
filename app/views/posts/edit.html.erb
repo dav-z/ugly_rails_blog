@@ -1,0 +1,7 @@
+<% if @current_user && @current_user.id == @post.user.id %>
+  <h1>Editing Post</h1>
+
+  <%= render 'form', post: @post %>
+<% else %>
+  <a href='/posts/<%= @post.id %>'>This is not your post!</a>
+<% end %>

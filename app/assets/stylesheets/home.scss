@@ -1,0 +1,34 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  text-align: center;
+}
+form {
+  margin: auto;
+}
+.homepage {
+  background-image: url('http://i.imgur.com/d1icUd8.gif');
+  width: 80%;
+  margin: auto;
+  height: 700px;
+  position: relative;
+}
+.homepage .hometext {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 10%;
+  font-size: 150px;
+}
+a .hometext:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+a .homepage:hover {
+  filter: invert(100%);
+}

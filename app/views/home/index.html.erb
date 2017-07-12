@@ -1,0 +1,10 @@
+<% if @current_user %>
+    <%= render 'posts/form', post: Post.new %>
+	</div>
+<% else %>
+  <a href="/signin">
+    <div class="homepage">
+      <div class="hometext">please sign in</div>
+    </div>
+  </a>
+<% end %>

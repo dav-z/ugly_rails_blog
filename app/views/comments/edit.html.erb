@@ -1,0 +1,7 @@
+<% if @current_user && @current_user.id == @comment.user.id %>
+  <h1>Editing Comment</h1>
+
+  <%= render 'form', comment: @comment %>
+<% else %>
+    <a href='/comments/<%= @comment.id %>'>This is not your comment!</a>
+<% end %>

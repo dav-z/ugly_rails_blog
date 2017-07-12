@@ -1,0 +1,33 @@
+<div class="about">
+  <p>
+    <strong>Name:</strong>
+    <%= @user.full_name %>
+  </p>
+
+  <p>
+    <strong>Bio:</strong>
+    <%= @user.bio %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+
+  <% if @current_user && @current_user.id == @user.id %>
+    <br>
+    <%= link_to 'Edit Profile', edit_user_path(@user) %> | <%= link_to 'Delete Account', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% else %>
+  <% end %>
+</div>
+<div class="profileposts">
+<h2>Posts:</h2>
+  <% @user.posts.order( id: :desc ).each do |post| %>
+    <a href='/posts/<%= post.id %>'>
+      <div class="profilepost">
+      <strong><%= post.title %></strong><br>
+      <%= post.body %>
+      </div>
+    </a>
+  <% end %>
+</div>

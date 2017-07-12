@@ -1,0 +1,11 @@
+<div class="profileposts">
+  <h2>New Users</h2>
+    <% @users.order( id: :desc ).each do |user| %>
+    <a href='/users/<%= user.id %>'>
+      <div class="profilepost">
+        <strong><%= user.full_name %><br></strong>
+        <%= user.bio %><br>
+      </div>
+    </a>
+    <% end %>
+</div>

@@ -1,0 +1,13 @@
+<% if @current_user %>
+		<h1>Welcome, <%= @current_user.full_name %></h1>
+<% else %>
+  <div class="signinform">
+    <h1>Sign In</h1>
+  	<%= form_tag '/login' do %>
+  	<%= text_field_tag :email, nil, placeholder: 'email' %> <br>
+  	<%= password_field_tag :password, nil, placeholder: 'password' %> <br>
+  	<%= submit_tag 'Login' %> <br><br><br>
+    <a href="/users/new">I don't have an account.</a>
+  	<% end %>
+  </div>
+<% end %>

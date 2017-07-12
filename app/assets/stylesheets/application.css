@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-image: url('http://dl.glitter-graphics.com/pub/1627/1627145m3dbxc1lxl.gif');
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+  padding: 5px 10%;
+}
+nav {
+  background-color: pink;
+  width: 80%;
+  margin: auto;
+  height: 30px;
+}
+.topbox {
+  background-image: url('https://media.giphy.com/media/4FNiEuo9qR8Jy/giphy.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80%;
+  margin: auto;
+  height: 100px;
+}
+.topbox1 {
+  background-image: url('http://cdn.ebaumsworld.com/mediaFiles/picture/1548104/84972200.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80%;
+  margin: auto;
+  height: 100px;
+}
+.sessionlink {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+.sessionlink a {
+  padding: 10px;
+}
+a {
+  text-decoration: none;
+  color: salmon;
+}
+a div:hover {
+  background-color: salmon;
+  color: cyan;
+}
+nav a:hover {
+  font-size: 20px;
+  color: cyan;
+}
+#error_explanation {
+  margin: auto;
+}
+.field_with_errors {
+  margin: auto;
+  width: 40%;
+}
