@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a blogging site built using Ruby on Rails.
 
-Things you may want to cover:
+* Running on Ruby 2.4.0
 
-* Ruby version
+* Using Rails scaffolding feature to build database
 
-* System dependencies
+* Users can create account, posts, and comments on posts.
 
-* Configuration
+* Feed shows latest 10 posts.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Explore shows the 10 newest users.
