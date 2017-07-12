@@ -78,3 +78,6 @@ nav a:hover {
   margin: auto;
   width: 40%;
 }
+.cheetah {
+  filter: invert(100%);
+}
