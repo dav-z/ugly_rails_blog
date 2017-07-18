@@ -16,7 +16,7 @@
     <%= form.text_field :lname, id: :user_lname, placeholder: 'last name' %><br>
     <%= form.text_field :bio, id: :user_bio, placeholder: 'bio' %><br>
     <%= form.text_field :email, id: :user_email, placeholder: 'email' %><br>
-    <%= password_field_tag :password,nil, placeholder: 'password' %><br>
+    <%= form.password_field :password, id: :user_password, placeholder: 'password' %><br>
     <%= form.submit %><br><br><br>
     <a href="/signin">I already have an account.</a>
   </div>

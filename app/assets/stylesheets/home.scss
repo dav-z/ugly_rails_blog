@@ -8,7 +8,10 @@ form {
   margin: auto;
 }
 .homepage {
-  background-image: url('http://i.imgur.com/d1icUd8.gif');
+  background-image: url('https://media.giphy.com/media/4FNiEuo9qR8Jy/giphy.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 80%;
   margin: auto;
   height: 700px;
@@ -26,9 +29,11 @@ form {
   font-size: 150px;
 }
 a .hometext:hover {
+  color: red;
   text-decoration: none;
   background-color: transparent;
 }
 a .homepage:hover {
+  color: red;
   filter: invert(100%);
 }

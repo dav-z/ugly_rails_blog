@@ -14,10 +14,10 @@
  *= require_self
  */
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  background-image: url('http://dl.glitter-graphics.com/pub/1627/1627145m3dbxc1lxl.gif');
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  background-image: linear-gradient(45deg, peachpuff, lightpink);
 }
 nav ul {
   list-style: none;
@@ -34,19 +34,11 @@ nav {
   height: 30px;
 }
 .topbox {
-  background-image: url('https://media.giphy.com/media/4FNiEuo9qR8Jy/giphy.gif');
-  background-size: cover;
+  background-image: url('logo.gif');
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 80%;
-  margin: auto;
-  height: 100px;
-}
-.topbox1 {
-  background-image: url('http://cdn.ebaumsworld.com/mediaFiles/picture/1548104/84972200.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: peachpuff;
   width: 80%;
   margin: auto;
   height: 100px;
@@ -68,7 +60,7 @@ a div:hover {
   color: cyan;
 }
 nav a:hover {
-  font-size: 20px;
+  text-transform: uppercase;
   color: cyan;
 }
 #error_explanation {
@@ -80,4 +72,12 @@ nav a:hover {
 }
 .cheetah {
   filter: invert(100%);
+}
+#timestamps {
+  font-size: 10px;
+  margin: 0;
+}
+.profilepost h3 {
+  margin-bottom: 0;
+  font-size: 20px;
 }

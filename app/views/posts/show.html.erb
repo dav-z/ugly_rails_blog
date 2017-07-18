@@ -1,7 +1,8 @@
 <div class="profileposts">
   <div class="profilepost">
     <h3><%= @post.title %></h3>
-    <%= @post.body %><br>
+    <p id="timestamps">Post created at: <%= @post.created_at.strftime("%H:%M") %> <%= @post.created_at.strftime("%d %b. %Y") %></p>
+    <p><%= @post.body %></p>
   <% if @current_user && @current_user.id == @post.user_id %>
     <%= link_to 'Edit', edit_post_path(@post) %> |
     <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -9,11 +10,13 @@
   Posted by: <a href="/users/<%= @post.user_id %>"><%= @post.user.full_name %></a>
   <% end %>
   </div>
-
-  <%= render 'comments/form', comment: Comment.new(post_id: @post.id) %>
+  <% if @current_user %>
+    <%= render 'comments/form', comment: Comment.new(post_id: @post.id) %>
+  <% end %>
   <% @post.comments.order( id: :desc ).each do |comment| %>
     <div class="commentbody">
-      <%= comment.body %><br>
+      <p><%= comment.body %></p>
+      <p id="timestamps">Comment created at: <%= comment.created_at.strftime("%H:%M") %> <%= comment.created_at.strftime("%d %b. %Y") %></p>
       <% if @current_user && @current_user.id == comment.user_id %>
         <em>Your comment:</em> <a href="/comments/<%= comment.id %>/edit">Edit</a> | <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% elsif @current_user && @current_user.id == @post.user_id %>
